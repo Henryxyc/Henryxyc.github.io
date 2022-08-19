@@ -144,8 +144,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #ffe4e1;
-  color: #171715;
+  background-color: #d8b6b6;
+  color: #f8f8ff;
   -webkit-overflow-scrolling: touch;
   background-attachment: fixed;
 }
@@ -2105,7 +2105,7 @@ form input.st-search-input_my {
   padding: 4px 9px 4px 27px;
   height: 20px;
   width: 190px;
-  color: #f8f8ff;
+  color: #666;
   border: 1px solid #ccc;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
