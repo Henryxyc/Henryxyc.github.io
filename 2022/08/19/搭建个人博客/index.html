@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>搭建个人博客 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="搭建个人博客 1.下载node.js1.并安装，安装完成后使用命令行终端查看版本信息 12345node -vnpm -v   2.安装搭建个人博客博客框架2.1 由于在国内用npm包管理器安装镜像源很慢，我们需要用淘宝的镜像源cnpm来安装 1npm install -g cnpm --registry&#x3D;http:&#x2F;&#x2F;registry.npm.taobao.org   2.2 安装完后查看版本信">
+  <meta name="description" content="搭建个人博客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="搭建个人博客">
 <meta property="og:url" content="http://example.com/2022/08/19/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="搭建个人博客 1.下载node.js1.并安装，安装完成后使用命令行终端查看版本信息 12345node -vnpm -v   2.安装搭建个人博客博客框架2.1 由于在国内用npm包管理器安装镜像源很慢，我们需要用淘宝的镜像源cnpm来安装 1npm install -g cnpm --registry&#x3D;http:&#x2F;&#x2F;registry.npm.taobao.org   2.2 安装完后查看版本信">
+<meta property="og:description" content="搭建个人博客">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2022/08/19/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E6%96%91-1660892269400.jpg">
 <meta property="og:image" content="http://example.com/2022/08/19/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20220818160250509-1660892269400.png">
@@ -36,8 +36,9 @@
 <meta property="og:image" content="http://example.com/2022/08/19/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20220819095019469-1660892269401.png">
 <meta property="og:image" content="http://example.com/2022/08/19/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20220819105243618.png">
 <meta property="article:published_time" content="2022-08-19T07:19:54.000Z">
-<meta property="article:modified_time" content="2022-08-19T12:11:41.424Z">
+<meta property="article:modified_time" content="2022-08-21T15:34:59.876Z">
 <meta property="article:author" content="Henry">
+<meta property="article:tag" content="个人博客">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2022/08/19/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E6%96%91-1660892269400.jpg">
   
@@ -82,6 +83,8 @@
 			
 				<li><a href="/">主页</a></li>
 	        
+				<li><a href="/categories">分类</a></li>
+	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
@@ -109,6 +112,36 @@
 					<a class="qq" target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=sICURy9AaRAsmtRQKgEAUx7LdFIihmvK&noverify=0&personal_qrcode_source=3" title="qq"><i class="icon-qq"></i></a>
 		        
 			</div>
+
+			<!-- 《左侧边栏添加--APlayer音乐播放器：详见：https://aplayer.js.org/#/zh-Hans/ -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+
+    <div id="aplayer" style="text-align:left"></div>
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+
+    <!-- 为方便修改，添加一个配置文件，修改时直接修改配置文件即可。 -->
+    <script type="text/javascript" src="/js/APlayer_config.js"></script>
+
+    <!-- 根据封面自适应主题色，主要是作用于进度条 -->
+    <script type="text/javascript">
+          const colorThief = new ColorThief();
+          const setTheme = (index) => {
+            if (!ap.list.audios[index].theme) {
+              colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
+                ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+              });
+            }
+          };
+          setTheme(ap.list.index);
+          ap.on('listswitch', (data) => {
+            setTheme(data.index);
+          });       
+    </script>
+
+<!-- 左侧边栏添加--APlayer音乐播放器》 -->
+			
 		</nav>
 	</header>		
 </div>
@@ -134,6 +167,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -152,7 +187,9 @@
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 100%"><a href="/">主页</a></li>
+					<li style="width: 50%"><a href="/">主页</a></li>
+		        
+					<li style="width: 50%"><a href="/categories">分类</a></li>
 		        
 				</ul>
 			</nav>
@@ -188,6 +225,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="搭建个人博客"><a href="#搭建个人博客" class="headerlink" title="搭建个人博客"></a>搭建个人博客</h1><p><img src="/2022/08/19/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E6%96%91-1660892269400.jpg" alt="斑"></p>
+<span id="more"></span>
+
 <h2 id="1-下载node-js"><a href="#1-下载node-js" class="headerlink" title="1.下载node.js"></a>1.下载node.js</h2><p>1.并安装，安装完成后使用命令行终端查看版本信息</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line"></span><br><span class="line">npm -v</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 
@@ -263,7 +302,8 @@
 <ul>
 <li>git clone到themes目录下</li>
 </ul>
-<p>git clone <a target="_blank" rel="noopener" href="https://gitee.com/preccrep/hexo-theme-jelly.git">https://gitee.com/preccrep/hexo-theme-jelly.git</a> themes/yilia</p>
+<p>jelly主题：git clone <a target="_blank" rel="noopener" href="https://gitee.com/preccrep/hexo-theme-jelly.git">https://gitee.com/preccrep/hexo-theme-jelly.git</a> themes/jelly</p>
+<p>yilia主题： git clone <a target="_blank" rel="noopener" href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia</p>
 <ul>
 <li>或直接下载压缩包</li>
 </ul>
@@ -312,7 +352,29 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">个人博客</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/学习笔记//" class="article-tag-list-link color5">学习笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -469,7 +531,7 @@
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
@@ -529,6 +591,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">个人博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Spring</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">SpringCloud</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">hexo-yilia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">音乐播放器</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -602,7 +684,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">Henry&lt;br&gt;&lt;br&gt;想成为一名有趣的程序员&lt;br&gt;</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">敲代码&lt;br&gt;赚钱&lt;br&gt;打游戏&lt;br&gt;锻炼&lt;br&gt;过想要的生活&lt;br&gt;</div>
   	  	
     	</section>
     
