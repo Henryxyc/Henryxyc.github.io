@@ -14,9 +14,9 @@ const ap = new APlayer({
     audio: [{
             name: '你瞒我瞒',
             artist: '陈柏宇',
-            lrc: 'lrc/你瞒我瞒（降调0.8x）-Cubi.lrc',
+            lrc: 'lrc/你瞒我瞒 (Fight For Live)-陈柏宇.lrc',
             cover: 'https://y.qq.com/music/photo_new/T002R300x300M000001gqOnU3DTg2S_2.jpg?max_age=2592000',
-            url: 'http://music.163.com/song/media/outer/url?id=1972702117.mp3'
+            url: 'http://ws.stream.qqmusic.qq.com/C400003DRcvt0XolWC.m4a?guid=759484337&vkey=B9B9488651F687387095FE3B6B695BF0E73E5DCC011B7045E23A839EEE864AA6019F6DF2C367CA63FB1C63716BB19EE361EF962397DE74D3&uin=&fromtag=120032'
                   },
 {
             name: '梦不落雨林',
