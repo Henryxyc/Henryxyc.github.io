@@ -12,11 +12,11 @@ const ap = new APlayer({
     listFolded: false,
 
     audio: [{
-            name: '裂缝中的阳光',
-            artist: '林俊杰',
-            lrc: 'lrc/裂缝中的阳光-LBI利比.lrc',
+            name: '你瞒我瞒',
+            artist: '陈柏宇',
+            lrc: 'lrc/你瞒我瞒（降调0.8x）-Cubi.lrc',
             cover: 'https://y.qq.com/music/photo_new/T002R300x300M000001gqOnU3DTg2S_2.jpg?max_age=2592000',
-            url: 'https://dl.stream.qqmusic.qq.com/C400001cS6VI1XeMHN.m4a?guid=3241433448&vkey=44FBB4CEC44580CD34B40340C451ECEB156C24CF9662A526A774FB2E239F898266F7EA79B6A57DED102DE95E3E040C4A14080A9094229773&uin=496286034&fromtag=120032'
+            url: 'http://music.163.com/song/media/outer/url?id=1972702117.mp3'
                   },
 {
             name: '梦不落雨林',
@@ -26,18 +26,18 @@ const ap = new APlayer({
             url: 'http://music.163.com/song/media/outer/url?id=1417496128.mp3'
                   },
 	{
-            name: '就是爱你',
-            artist: '陶喆',
-            lrc: 'lrc/就是爱你-陶喆.lrc',
-            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000003ofGzS3C23Ow.jpg?max_age=2592000',
-            url: 'http://ws.stream.qqmusic.qq.com/C400000nkz1h4IOHbw.m4a?guid=168329864&vkey=61FF61AB1C724182A7331216F6CE947DB5293BAC94EB83E6828E07ED7B77FCE25C6551B73A1985515B0E7EA56DCA98370A731A29288A77A6&uin=&fromtag=120032'
+            name: '簇拥烈日的花',
+            artist: 'Morerare,迟里乌布',
+            lrc: '簇拥烈日的花-Morerare,迟里乌布.lrc',
+            cover: 'https://p5.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4874132307/4499/f228/d867/da64b9725e125943ad4e14e4c72d0884.png',
+            url: 'http://music.163.com/song/media/outer/url?id=1896178370.mp3'
                   },
 {
-            name: '葡萄成熟时',
-            artist: '陈奕迅',
-            lrc: 'lrc/葡萄成熟时-陈奕迅.lrc',
-            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000003rytri2FHG3V.jpg?max_age=2592000',
-            url: 'http://ws.stream.qqmusic.qq.com/C400004V8Yph2t2V7s.m4a?guid=656274441&vkey=9D14F7C5CDDD55610D498A024A792C109DC819CB20BD1B5D0597496BBBD960526746D679DF0677DCACAAF523A6A26E8EC76BDDAF899948CA&uin=&fromtag=120032'
+            name: '错位时空',
+            artist: '艾辰',
+            lrc: 'lrc/错位时空-艾辰.lrc',
+            cover: 'https://p2.music.126.net/8C0lwLE88j9ZwLyPQ9a4FA==/109951165595770076.jpg?param=130y130',
+            url: 'http://music.163.com/song/media/outer/url?id=1808492017.mp3'
                   },
 {
             name: '冻结+不流泪的机场+豆浆油条 ',
