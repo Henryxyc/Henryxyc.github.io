@@ -28,7 +28,7 @@ const ap = new APlayer({
 	{
             name: '簇拥烈日的花',
             artist: 'Morerare,迟里乌布',
-            lrc: '簇拥烈日的花-Morerare,迟里乌布.lrc',
+            lrc: 'lrc/簇拥烈日的花-Morerare,迟里乌布.lrc',
             cover: 'https://p5.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4874132307/4499/f228/d867/da64b9725e125943ad4e14e4c72d0884.png',
             url: 'http://music.163.com/song/media/outer/url?id=1896178370.mp3'
                   },
