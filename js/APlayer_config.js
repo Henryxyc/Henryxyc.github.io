@@ -40,11 +40,11 @@ const ap = new APlayer({
             url: 'http://music.163.com/song/media/outer/url?id=1808492017.mp3'
                   },
 {
-            name: '冻结+不流泪的机场+豆浆油条 ',
-            artist: '林俊杰',
-            lrc: 'lrc/不流泪的机场-林俊杰.lrc',
-            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000002byTjo3vFz40.jpg?max_age=2592000',
-            url: 'http://ws.stream.qqmusic.qq.com/C400002bUCin4KvACb.m4a?guid=978222436&vkey=8CD1D5BE41444D07C27BB0BE0E5F21D3C4AE2E8B425C5DA5FC7E7F356E845E1FCEEB7D10010858E31EC619C438FAF7FC61DF35084EE9DA70&uin=&fromtag=120032'
+            name: 'Stay The Night',
+            artist: 'Just Kiddin,Camden Cox',
+            lrc: 'lrc/Stay The Night-Just Kiddin,Camden Cox.lrc',
+            cover: 'https://p2.music.126.net/NAnUfXkmhEa2AFewmrgKHA==/109951164193873399.jpg?param=130y130',
+            url: 'http://music.163.com/song/media/outer/url?id=1376075781.mp3'
                   },
         {
             name: '必杀技',
