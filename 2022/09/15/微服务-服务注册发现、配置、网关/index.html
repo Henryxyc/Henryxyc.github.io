@@ -108,34 +108,68 @@
 		        
 			</div>
 
-			<!-- 《左侧边栏添加--APlayer音乐播放器：详见：https://aplayer.js.org/#/zh-Hans/ -->
+			
+				
+			<!-- require APlayer -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+<div style="opacity:0.7">
+    <meting-js
+        server="netease"
+        type="playlist"
+        id="7638842540"
+        fixed="true"
+        volume="0.3"
+        order="random"
+        >
+    </meting-js>
+</div>
 
-    <div id="aplayer" style="text-align:left"></div>
-    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
-
-    <!-- 为方便修改，添加一个配置文件，修改时直接修改配置文件即可。 -->
-    <script type="text/javascript" src="/js/APlayer_config.js"></script>
-
-    <!-- 根据封面自适应主题色，主要是作用于进度条 -->
-    <script type="text/javascript">
-          const colorThief = new ColorThief();
-          const setTheme = (index) => {
-            if (!ap.list.audios[index].theme) {
-              colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
-                ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
-              });
+<script>
+    ap = null
+    Object.defineProperty(document.querySelector('meting-js'),"aplayer",{
+        set: function(aplayer) {
+            ap=aplayer
+            ready();
+        }
+    });
+    
+    isRecover = false;
+    function ready(){
+        ap.on('canplay', function () {
+            if(!isRecover){
+                if(localStorage.getItem("musicIndex") != null){
+                    musicIndex = localStorage.getItem("musicIndex");
+                    musicTime = localStorage.getItem("musicTime");
+                    if(ap.list.index != musicIndex){
+                        ap.list.switch(musicIndex);
+                    }else{
+                        ap.seek(musicTime);
+                        ap.play();
+                        localStorage.clear();
+                        isRecover = true;
+                    }
+                }else{
+                    isRecover = true;
+                }
             }
-          };
-          setTheme(ap.list.index);
-          ap.on('listswitch', (data) => {
-            setTheme(data.index);
-          });       
-    </script>
+        });
+    }
 
-<!-- 左侧边栏添加--APlayer音乐播放器》 -->
+    window.onbeforeunload = function(event) {
+        if(!ap.audio.paused){
+            musicIndex = ap.list.index;
+            musicTime = ap.audio.currentTime;
+            localStorage.setItem("musicIndex",musicIndex);
+            localStorage.setItem("musicTime",musicTime);
+        }
+    };
+</script>
+
+    
 
 			
 		</nav>
@@ -476,6 +510,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2022/09/16/%E4%BD%BF%E7%94%A8APlayer%E5%92%8CMetingJS%E8%A7%A3%E5%86%B3%E5%8D%9A%E5%AE%A2%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC%E9%9F%B3%E4%B9%90%E6%9A%82%E5%81%9C%E7%9A%84%E9%97%AE%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          使用APlayer和MetingJS解决博客页面跳转音乐暂停的问题
+        
+      </div>
+    </a>
+  
   
     <a href="/2022/09/09/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">博客部署到自己的云服务器</div>
@@ -644,6 +687,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">音乐播放器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">-- 个人博客 -- 音乐播放器</a>
               </li>
              
               <li class="article-tag-list-item">
