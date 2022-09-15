@@ -8,13 +8,14 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>微服务-服务注册发现、配置、网关 | Henry的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="微服务-服务注册发现、配置、网关SpringBoot整合MyBatis-Plus一、整合MyBatis-Plus 1）、导入依赖 123456&lt;!-- mybatis-plus--&gt;&lt;dependency&gt;    &lt;groupId&gt;com.baomidou&lt;&#x2F;groupId&gt;    &lt;artifactId&gt;mybatis-plus-boo">
+  <meta name="description" content="微服务-服务注册发现、配置、网关SpringBoot整合MyBatis-Plus">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微服务-服务注册发现、配置、网关">
 <meta property="og:url" content="http://example.com/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/index.html">
 <meta property="og:site_name" content="Henry的个人博客">
-<meta property="og:description" content="微服务-服务注册发现、配置、网关SpringBoot整合MyBatis-Plus一、整合MyBatis-Plus 1）、导入依赖 123456&lt;!-- mybatis-plus--&gt;&lt;dependency&gt;    &lt;groupId&gt;com.baomidou&lt;&#x2F;groupId&gt;    &lt;artifactId&gt;mybatis-plus-boo">
+<meta property="og:description" content="微服务-服务注册发现、配置、网关SpringBoot整合MyBatis-Plus">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/image-20220915225329626.png">
 <meta property="og:image" content="http://example.com/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/image-20220914202705224.png">
 <meta property="og:image" content="http://example.com/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/image-20220914203112012.png">
 <meta property="og:image" content="http://example.com/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/image-20220914231735422.png">
@@ -25,14 +26,14 @@
 <meta property="og:image" content="http://example.com/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/image-20220915203003174.png">
 <meta property="og:image" content="http://example.com/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/image-20220915222515516.png">
 <meta property="article:published_time" content="2022-09-15T14:30:25.000Z">
-<meta property="article:modified_time" content="2022-09-15T14:35:03.528Z">
+<meta property="article:modified_time" content="2022-09-15T14:54:37.124Z">
 <meta property="article:author" content="Henry">
 <meta property="article:tag" content="微服务">
 <meta property="article:tag" content="Nacos服务注册">
 <meta property="article:tag" content="Nacos配置管理">
 <meta property="article:tag" content="Gateway网关">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/image-20220914202705224.png">
+<meta name="twitter:image" content="http://example.com/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/image-20220915225329626.png">
   
     <link rel="alternative" href="/atom.xml" title="Henry的个人博客" type="application/atom+xml">
   
@@ -224,7 +225,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="微服务-服务注册发现、配置、网关"><a href="#微服务-服务注册发现、配置、网关" class="headerlink" title="微服务-服务注册发现、配置、网关"></a>微服务-服务注册发现、配置、网关</h1><h2 id="SpringBoot整合MyBatis-Plus"><a href="#SpringBoot整合MyBatis-Plus" class="headerlink" title="SpringBoot整合MyBatis-Plus"></a>SpringBoot整合MyBatis-Plus</h2><p>一、整合MyBatis-Plus</p>
+        <h1 id="微服务-服务注册发现、配置、网关"><a href="#微服务-服务注册发现、配置、网关" class="headerlink" title="微服务-服务注册发现、配置、网关"></a>微服务-服务注册发现、配置、网关</h1><h2 id="SpringBoot整合MyBatis-Plus"><a href="#SpringBoot整合MyBatis-Plus" class="headerlink" title="SpringBoot整合MyBatis-Plus"></a>SpringBoot整合MyBatis-Plus</h2><p><img src="/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/image-20220915225329626.png" alt="image-20220915225329626"></p>
+<span id="more"></span>
+
+<p>一、整合MyBatis-Plus</p>
 <p>1）、导入依赖</p>
 <figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- mybatis-plus--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.baomidou&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;mybatis-plus-boot-starter&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;<span class="number">3.5</span><span class="number">.1</span>&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></tbody></table></figure>
 
