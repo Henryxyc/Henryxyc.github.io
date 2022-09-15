@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Henry的个人博客</title>
+  <title>Tag: Gateway网关 | Henry的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Henry的个人博客">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/tags/Gateway%E7%BD%91%E5%85%B3/index.html">
 <meta property="og:site_name" content="Henry的个人博客">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Henry">
@@ -188,145 +188,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-微服务-服务注册发现、配置、网关" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2022" class="archive-year">2022</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/" class="archive-article-date">
+  	<time datetime="2022-09-15T14:30:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-15</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/">微服务-服务注册发现、配置、网关</a>
+      <a class="archive-article-title" href="/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/">微服务-服务注册发现、配置、网关</a>
     </h1>
   
 
-        
-        <a href="/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/" class="archive-article-date">
-  	<time datetime="2022-09-15T14:30:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="微服务-服务注册发现、配置、网关"><a href="#微服务-服务注册发现、配置、网关" class="headerlink" title="微服务-服务注册发现、配置、网关"></a>微服务-服务注册发现、配置、网关</h1><h2 id="SpringBoot整合MyBatis-Plus"><a href="#SpringBoot整合MyBatis-Plus" class="headerlink" title="SpringBoot整合MyBatis-Plus"></a>SpringBoot整合MyBatis-Plus</h2><p>一、整合MyBatis-Plus</p>
-<p>1）、导入依赖</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- mybatis-plus--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.baomidou&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;mybatis-plus-boot-starter&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;<span class="number">3.5</span><span class="number">.1</span>&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>2）、配置</p>
-<p>​	1.配置数据源：</p>
-<p>​		a.导入数据库的驱动</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--    导入mysql驱动    --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;mysql&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;<span class="number">8.0</span><span class="number">.17</span>&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>​		b.在application.yml配置数据源相关信息</p>
-<p>如：</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    username: root</span><br><span class="line">    password: <span class="number">123456</span></span><br><span class="line">    driver-class-name: com.mysql.cj.jdbc.Driver</span><br><span class="line">    url: jdbc:mysql:<span class="comment">//192.168.184.128:3306/henrymail_pms</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>​	2.配置MyBatis-Plus:</p>
-<p>​		 a.在启动类中使用MapperScan注解扫描dao层下的mapper接口(右键Copy Path -&gt; Copy Reference)		</p>
-<p><img src="/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/image-20220914202705224.png" alt="image-20220914202705224"></p>
-<p>​		 b.在application.yml中告诉MyBatis-Plus,sql映射文件位置并设置id自增</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mybatis-plus:</span><br><span class="line">  mapper-locations: classpath:/mapper<span class="comment">/**/*.xml</span></span><br><span class="line"><span class="comment">  global-config:</span></span><br><span class="line"><span class="comment">    db-config:</span></span><br><span class="line"><span class="comment">      id-type: auto</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p><img src="/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/image-20220914203112012.png" alt="image-20220914203112012"></p>
-<h2 id="远程调用其他微服务"><a href="#远程调用其他微服务" class="headerlink" title="远程调用其他微服务"></a>远程调用其他微服务</h2><p>一、使用openFeign</p>
-<p>1）、引入openFeign</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-cloud-starter-openfeign&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>2）、编写一个接口，告诉Spring Cloud这个接口需要调用远程服务(建议单独建一个feign包来存放远程调用的接口)</p>
-<p>声明接口的每一个方法都是调用哪个远程服务的哪个请求</p>
-<p><img src="/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/image-20220914231735422.png" alt="image-20220914231735422"></p>
-<p><strong>@FeignClient()放入需要调用远程服务的微服务名</strong></p>
-<p><strong>@RequestMapping()中需要填写完整的接口路径</strong></p>
-<p>3）、开启远程调用功能</p>
-<p>启动类上添加@EnableFeignClients注解</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@EnableFeignClients(basePackages = "com.xyc.henrymail.member.feign")</span> </span><br><span class="line"><span class="comment">//basePackages为自动扫描feign包下所有带有FeignClient注解的接口</span></span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h2 id="Nacos服务注册中心"><a href="#Nacos服务注册中心" class="headerlink" title="Nacos服务注册中心"></a>Nacos服务注册中心</h2><h3 id="Nacos服务搭建"><a href="#Nacos服务搭建" class="headerlink" title="Nacos服务搭建"></a>Nacos服务搭建</h3><ul>
-<li>下载安装包</li>
-<li>解压</li>
-<li>在bin目录下运行指令：startup.cmd -m standalone</li>
-<li>默认服务地址端口为localhost:8848，可以在conf配置文件中修改端口</li>
-</ul>
-<h3 id="Nacos服务注册或发现"><a href="#Nacos服务注册或发现" class="headerlink" title="Nacos服务注册或发现"></a>Nacos服务注册或发现</h3><ul>
-<li>引入nacos.discovery依赖</li>
-<li>配置nacos地址spring.cloud.nacos.server-addr</li>
-<li>使用 @EnableDiscoveryClient 注解开启服务注册与发现功能</li>
-</ul>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@EnableDiscoveryClient</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ProviderApplication</span> {</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> {</span><br><span class="line">		SpringApplication.run(ProviderApplication.class, args);</span><br><span class="line">	}</span><br><span class="line"></span><br><span class="line">	<span class="meta">@RestController</span></span><br><span class="line">	<span class="keyword">class</span> <span class="title class_">EchoController</span> {</span><br><span class="line">		<span class="meta">@GetMapping(value = "/echo/{string}")</span></span><br><span class="line">		<span class="keyword">public</span> String <span class="title function_">echo</span><span class="params">(<span class="meta">@PathVariable</span> String string)</span> {</span><br><span class="line">				<span class="keyword">return</span> string;</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h3 id="Nacos配置管理"><a href="#Nacos配置管理" class="headerlink" title="Nacos配置管理"></a>Nacos配置管理</h3><p>一、将配置统一到nacos配置中心</p>
-<p>1）、引入nacos-config依赖</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--   ncaos配置中心--&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-config&lt;/artifactId&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>2）、在应用的 /src/main/resources/bootstrap.properties 配置文件中配置 Nacos Config 元数据</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">spring.application.name=nacos-config-example</span><br><span class="line">spring.cloud.nacos.config.server-addr=<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">8848</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>3）、需要给配置中心默认添加一个数据集（Data Id）henrymail-coupon.properties。默认规则：<strong>应用名.properties</strong></p>
-<p>1、添加的配置的详情如下</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">dataId 为 nacos-config-example.properties</span><br><span class="line">group 为 DEFAULT_GROUP</span><br><span class="line"></span><br><span class="line">内容如下:</span><br><span class="line"></span><br><span class="line">spring.cloud.nacos.config.serverAddr=<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">8848</span></span><br><span class="line">spring.cloud.nacos.config.prefix=PREFIX</span><br><span class="line">spring.cloud.nacos.config.group=GROUP</span><br><span class="line">spring.cloud.nacos.config.namespace=NAMESPACE</span><br></pre></td></tr></tbody></table></figure>
-
-<p><img src="/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/image-20220915162443112.png" alt="image-20220915162443112"></p>
-<p>2、动态获取配置</p>
-<p>添加@RefreshScope 动态获取并刷新配置</p>
-<p><img src="/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/image-20220915163608926.png" alt="image-20220915163608926"></p>
-<p><strong>开启后就可以直接在nacos管理界面直接修改配置无需重新打包部署项目</strong></p>
-<p>@Value(“${配置项的名}”)，获取到配置。</p>
-<p><strong>如果配置中心和当前应用都配置了相同的项优先使用配置中心</strong></p>
-<p>二、命名空间：配置隔离</p>
-<p>1）、默认：public(保留空间)：默认新增的所有配置都在public空间中。</p>
-<p>​       1、开发、测试、生产：利用命名空间来做环境隔离。</p>
-<p>​		注意：在bootstrap.properties配置上，需要使用哪个命名空间下的配置。</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spring.cloud.nacos.config.namespace=a5e74974-aa6c-<span class="number">4009</span>-<span class="number">9087</span>-692b88dad128 </span><br></pre></td></tr></tbody></table></figure>
-
-<p>​        2、每一个微服务之间互相隔离，每一个微服务都创建自己的命名空间，只加载自己命名空间下的所有配置</p>
-<p><img src="/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/image-20220915170115045.png" alt="image-20220915170115045"></p>
-<p>3）、配置分组：</p>
-<p>   默认所有配置集都属于：DEFAULT_GROUP:</p>
-<p>​	可以配置每个微服务中不同环境下的分组</p>
-<p>项目中的使用：每个微服务自己的命名空间，使用配置分组区分环境，dev，test，prod</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">spring.application.name=henrymail-coupon</span><br><span class="line">spring.cloud.nacos.config.server-addr=<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">8848</span></span><br><span class="line">spring.cloud.nacos.config.namespace=4536bae5-a710-47b6-ba45-<span class="number">059314489e31</span></span><br><span class="line">spring.cloud.nacos.config.group=dev </span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<p><img src="/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/image-20220915170603987.png" alt="image-20220915170603987"></p>
-<p>三、同时加载多个配置集</p>
-<p>1）、微服务任何配置信息、任何配置文件都可以放在配置中心中</p>
-<p>2）、只需要在bootstrap.properties说明加载配置中心哪些配置文件即可</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">spring.application.name=henrymail-coupon</span><br><span class="line">spring.cloud.nacos.config.server-addr=<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">8848</span></span><br><span class="line">spring.cloud.nacos.config.namespace=4536bae5-a710-47b6-ba45-<span class="number">059314489e31</span></span><br><span class="line">spring.cloud.nacos.config.group=dev</span><br><span class="line">    </span><br><span class="line">spring.cloud.nacos.config.ext-config[<span class="number">0</span>].data-id=datasource.yml</span><br><span class="line">spring.cloud.nacos.config.ext-config[<span class="number">0</span>].group=dev</span><br><span class="line"></span><br><span class="line">spring.cloud.nacos.config.ext-config[<span class="number">1</span>].data-id=mybatis-plus.yml</span><br><span class="line">spring.cloud.nacos.config.ext-config[<span class="number">1</span>].group=dev</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">spring.cloud.nacos.config.ext-config[<span class="number">2</span>].data-id=other.yml</span><br><span class="line">spring.cloud.nacos.config.ext-config[<span class="number">2</span>].group=dev</span><br></pre></td></tr></tbody></table></figure>
-
-<p><img src="/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/image-20220915203003174.png" alt="image-20220915203003174"></p>
-<p>3）、@Value、@ConfigurationProperties。。。</p>
-<p>以前SpringBoot任何方法从配置文件中获取值，都能使用。</p>
-<p>配置中心有的优先使用配置中心的</p>
-<h3 id="网关-SpringCloud-Gateway"><a href="#网关-SpringCloud-Gateway" class="headerlink" title="网关 SpringCloud-Gateway"></a>网关 SpringCloud-Gateway</h3><p>一、核心配置</p>
-<p>1）、导入Gateway依赖</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-cloud-starter-gateway&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>2）、将自己注册到nacos注册中心和配置管理中去</p>
-<p>bootstrap.properties:</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">spring.application.name=henrymail-gateway</span><br><span class="line">spring.cloud.nacos.config.server-addr=<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">8848</span></span><br><span class="line">spring.cloud.nacos.config.namespace=6bb6ded0-5a50-49d1-be60-14b0fef5c0cc</span><br></pre></td></tr></tbody></table></figure>
-
-<p>application.properties:</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 应用名称</span><br><span class="line">spring.application.name=henrymail-gateway</span><br><span class="line">spring.cloud.nacos.config.server-addr=<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">8848</span></span><br><span class="line">server.port=<span class="number">88</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>3）、配置路由规则(参照SpringCloud-Gtaeway官网找相对应的路由规则)</p>
-<p>如:application.yml:</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  cloud:</span><br><span class="line">    gateway:</span><br><span class="line">      routes:</span><br><span class="line">        - id: test_route</span><br><span class="line">          uri: https:<span class="comment">//www.baidu.com</span></span><br><span class="line">          predicates:</span><br><span class="line">          - Query=url,baidu</span><br><span class="line"></span><br><span class="line">        - id: test_route2</span><br><span class="line">          uri: https:<span class="comment">//www.qq.com</span></span><br><span class="line">          predicates:</span><br><span class="line">          - Query=url,qq</span><br></pre></td></tr></tbody></table></figure>
-
-<p>请求参数中包含url=???时，gateway会路由到对应的uri</p>
-<p><img src="/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/image-20220915222515516.png" alt="image-20220915222515516"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -350,7 +239,7 @@
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -363,389 +252,17 @@
 	</div>
 
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-博客部署到自己的云服务器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/09/09/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/">博客部署到自己的云服务器</a>
-    </h1>
-  
-
-        
-        <a href="/2022/09/09/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="archive-article-date">
-  	<time datetime="2022-09-09T12:24:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="将博客部署到自己的云服务器"><a href="#将博客部署到自己的云服务器" class="headerlink" title="将博客部署到自己的云服务器"></a>将博客部署到自己的云服务器</h1><p>只需四步就能完成将博客部署到自己的云服务器上，我这里使用的是腾讯云服务器(阿里的太贵买不起…)</p>
-<p><img src="/2022/09/09/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/image-20220909211647678.png" alt="image-20220909211647678"></p>
-        
-          <a class="article-more-a" href="/2022/09/09/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">个人博客</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/09/09/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hexo-yilia添加音乐播放器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/08/21/hexo-yilia%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/">hexo-yilia添加音乐播放器</a>
-    </h1>
-  
-
-        
-        <a href="/2022/08/21/hexo-yilia%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/" class="archive-article-date">
-  	<time datetime="2022-08-21T15:06:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="hexo-yilia主题添加音乐播放器"><a href="#hexo-yilia主题添加音乐播放器" class="headerlink" title="hexo-yilia主题添加音乐播放器"></a>hexo-yilia主题添加音乐播放器</h1><p><img src="/2022/08/21/hexo-yilia%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/image-20220821233328446.png" alt="image-20220821233328446"></p>
-        
-          <a class="article-more-a" href="/2022/08/21/hexo-yilia%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">个人博客</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hexo-yilia</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">音乐播放器</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记//" class="article-tag-list-link color5">学习笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/08/21/hexo-yilia%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-搭建个人博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/08/21/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">搭建个人博客</a>
-    </h1>
-  
-
-        
-        <a href="/2022/08/21/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2022-08-21T07:19:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="搭建个人博客"><a href="#搭建个人博客" class="headerlink" title="搭建个人博客"></a>搭建个人博客</h1><p><img src="/2022/08/21/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E6%96%91-1660892269400.jpg" alt="斑"></p>
-        
-          <a class="article-more-a" href="/2022/08/21/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">个人博客</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记//" class="article-tag-list-link color5">学习笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/08/21/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-SpringCloud笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/08/19/SpringCloud%E7%AC%94%E8%AE%B0/">SpringCloud笔记</a>
-    </h1>
-  
-
-        
-        <a href="/2022/08/19/SpringCloud%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2022-08-19T09:42:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="SpringCloud"><a href="#SpringCloud" class="headerlink" title="SpringCloud"></a>SpringCloud</h1><p><img src="/2022/08/19/SpringCloud%E7%AC%94%E8%AE%B0/%E4%B8%8D%E8%89%AF%E4%BA%BA.webp" alt="不良人"></p>
-        
-          <a class="article-more-a" href="/2022/08/19/SpringCloud%E7%AC%94%E8%AE%B0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">SpringCloud</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记//" class="article-tag-list-link color5">学习笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/08/19/SpringCloud%E7%AC%94%E8%AE%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -767,10 +284,10 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
