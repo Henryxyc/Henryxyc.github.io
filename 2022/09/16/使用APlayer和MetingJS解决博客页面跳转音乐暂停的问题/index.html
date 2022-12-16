@@ -51,118 +51,84 @@
       
 <div class="overlay" style="background: #FFDEAD"></div>
 <div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			<img src="/images/header.jpg" class="js-avatar">
-		</a>
-		<hgroup>
-		  <h1 class="header-author"><a href="/"></a></h1>
-		</hgroup>
-		
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/images/header.jpg" class="js-avatar">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/"></a></h1>
+        </hgroup>
+        
 
-		<nav class="header-menu">
-			<ul>
-			
-				<li><a href="/">Henry</a></li>
-	        
-				<li><a href="/">主页</a></li>
-	        
-				<li><a href="/categories">分类</a></li>
-	        
-			</ul>
-		</nav>
-		<nav class="header-smart-menu">
-    		
-    			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
-    			
+        <nav class="header-menu">
+            <ul>
             
-    			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
+                <li><a href="/">Henry</a></li>
             
-    			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
-    			
+                <li><a href="/">主页</a></li>
             
-		</nav>
-		<nav class="header-nav">
-			<div class="social">
-				
-					<a class="github" target="_blank" href="https://github.com/Henryxyc/Henryxyc.github.io.git" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="weibo" target="_blank" href="https://weibo.com/u/2291315487" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="qq" target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=sICURy9AaRAsmtRQKgEAUx7LdFIihmvK&noverify=0&personal_qrcode_source=3" title="qq"><i class="icon-qq"></i></a>
-		        
-			</div>
+                <li><a href="/categories">分类</a></li>
+            
+            </ul>
+        </nav>
+        <nav class="header-smart-menu">
+            
+                
+                <a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+                
+            
+                
+                <a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+                
+            
+                
+                <a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+                
+            
+        </nav>
+        <nav class="header-nav">
+            <div class="social">
+                
+                    <a class="github" target="_blank" href="https://github.com/Henryxyc/Henryxyc.github.io.git" title="github"><i class="icon-github"></i></a>
+                
+                    <a class="weibo" target="_blank" href="https://weibo.com/u/2291315487" title="weibo"><i class="icon-weibo"></i></a>
+                
+                    <a class="qq" target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=sICURy9AaRAsmtRQKgEAUx7LdFIihmvK&noverify=0&personal_qrcode_source=3" title="qq"><i class="icon-qq"></i></a>
+                
+            </div>
 
-			
-				<!-- APlayer音乐播放器 -->
-			<!-- require APlayer -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<!-- require MetingJS -->
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+            <!-- 《左侧边栏添加--APlayer音乐播放器：详见：https://aplayer.js.org/#/zh-Hans/ -->
 
-<div style="opacity:0.7;text-align:left">
-    <meting-js
-        server="netease"
-        type="playlist"
-        id="7638842540"
-        fixed="true"
-        volume="0.3"
-        order="list"
-        >
-    </meting-js>
-</div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
 
-<script>
-    ap = null
-    Object.defineProperty(document.querySelector('meting-js'),"aplayer",{
-        set: function(aplayer) {
-            ap=aplayer
-            ready();
-        }
-    });
-    
-    isRecover = false;
-    function ready(){
-        ap.on('canplay', function () {
-            if(!isRecover){
-                if(localStorage.getItem("musicIndex") != null){
-                    musicIndex = localStorage.getItem("musicIndex");
-                    musicTime = localStorage.getItem("musicTime");
-                    if(ap.list.index != musicIndex){
-                        ap.list.switch(musicIndex);
-                    }else{
-                        ap.seek(musicTime);
-                        ap.play();
-                        localStorage.clear();
-                        isRecover = true;
-                    }
-                }else{
-                    isRecover = true;
-                }
+    <div id="aplayer" style="text-align:left"></div>
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+
+    <!-- 为方便修改，添加一个配置文件，修改时直接修改配置文件即可。 -->
+    <script type="text/javascript" src="/js/APlayer_config.js"></script>
+
+    <!-- 根据封面自适应主题色，主要是作用于进度条 -->
+    <script type="text/javascript">
+          const colorThief = new ColorThief();
+          const setTheme = (index) => {
+            if (!ap.list.audios[index].theme) {
+              colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
+                ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+              });
             }
-        });
-    }
+          };
+          setTheme(ap.list.index);
+          ap.on('listswitch', (data) => {
+            setTheme(data.index);
+          });       
+    </script>
 
-    window.onbeforeunload = function(event) {
-        if(!ap.audio.paused){
-            musicIndex = ap.list.index;
-            musicTime = ap.audio.currentTime;
-            localStorage.setItem("musicIndex",musicIndex);
-            localStorage.setItem("musicTime",musicTime);
-        }
-    };
-</script>
+<!-- 左侧边栏添加--APlayer音乐播放器》 -->
 
-    
-
-			
-		</nav>
-	</header>		
+            
+        </nav>
+    </header>       
 </div>
 
 
