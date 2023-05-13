@@ -6,21 +6,31 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2022/8 | Henry</title>
+  <title>Powerjob部署 | Henry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="后端博客,java,springboot,springcloud,博客">
+  <meta name="keywords" content="powerjob,docker-compose,后端博客,java,springboot,springcloud,博客">
   
-  <meta name="description" content="Henry的个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Henry">
-<meta property="og:url" content="http://example.com/archives/2022/08/index.html">
+  <meta name="description" content="Powerjob部署快速开始（docker-compose版）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Powerjob部署">
+<meta property="og:url" content="http://example.com/2023/05/13/Powerjob%E9%83%A8%E7%BD%B2/index.html">
 <meta property="og:site_name" content="Henry">
-<meta property="og:description" content="Henry的个人博客">
+<meta property="og:description" content="Powerjob部署快速开始（docker-compose版）">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2023/05/13/Powerjob%E9%83%A8%E7%BD%B2/image-20230513151808976.png">
+<meta property="og:image" content="http://example.com/2023/05/13/Powerjob%E9%83%A8%E7%BD%B2/image-20230513143306144.png">
+<meta property="og:image" content="http://example.com/2023/05/13/Powerjob%E9%83%A8%E7%BD%B2/image-20230513143558233.png">
+<meta property="og:image" content="http://example.com/2023/05/Typora%E7%AC%94%E8%AE%B0/Powerjob%E9%83%A8%E7%BD%B2/image-20230513143630816.png">
+<meta property="og:image" content="http://example.com/2023/05/13/Powerjob%E9%83%A8%E7%BD%B2/image-20230513144158888.png">
+<meta property="og:image" content="http://example.com/2023/05/13/Powerjob%E9%83%A8%E7%BD%B2/image-20230513144358481.png">
+<meta property="article:published_time" content="2023-05-13T07:16:16.000Z">
+<meta property="article:modified_time" content="2023-05-13T07:44:47.839Z">
 <meta property="article:author" content="Henry">
-<meta property="article:tag" content="后端博客,java,springboot,springcloud,博客">
+<meta property="article:tag" content="powerjob">
+<meta property="article:tag" content="docker-compose">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/05/13/Powerjob%E9%83%A8%E7%BD%B2/image-20230513151808976.png">
   
     <link rel="alternative" href="/atom.xml" title="Henry" type="application/atom+xml">
   
@@ -226,181 +236,248 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Powerjob部署" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Powerjob部署
+    </h1>
+  
+
+        
+        <a href="/2023/05/13/Powerjob%E9%83%A8%E7%BD%B2/" class="archive-article-date">
+  	<time datetime="2023-05-13T07:16:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-13</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Powerjob部署"><a href="#Powerjob部署" class="headerlink" title="Powerjob部署"></a>Powerjob部署</h2><h2 id="快速开始（docker-compose版）"><a href="#快速开始（docker-compose版）" class="headerlink" title="快速开始（docker-compose版）"></a>快速开始（docker-compose版）</h2><p><img src="/2023/05/13/Powerjob%E9%83%A8%E7%BD%B2/image-20230513151808976.png" alt="image-20230513151808976"></p>
+<span id="more"></span>
+
+<h2 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h2><p>本地需要安装docker和docker-compose</p>
+<h2 id="1-下载项目"><a href="#1-下载项目" class="headerlink" title="1. 下载项目"></a>1. 下载项目</h2><figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone --depth=<span class="number">1</span> https:<span class="comment">//github.com/PowerJob/PowerJob.git</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h2 id="2-运行"><a href="#2-运行" class="headerlink" title="2. 运行"></a>2. 运行</h2><p>在正式运行之前，首先需要删除低版本 powerjob 相关依赖</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 一键删除命令</span><br><span class="line">docker rmi $(docker images | grep <span class="string">"powerjob"</span> | awk <span class="string">'{print $3}'</span>) </span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 进入到PowerJob工作目录</span><br><span class="line">cd PowerJob</span><br><span class="line"></span><br><span class="line"># 前台运行（初次运行时，推荐使用该方式，方便实时查看日志，排查问题）</span><br><span class="line">docker-compose up</span><br><span class="line"></span><br><span class="line"># 后台运行</span><br><span class="line">docker-compose up -d</span><br></pre></td></tr></tbody></table></figure>
+
+<p>刚开始启动时，<code>powerjob-worker-samples</code>会启动失败，等<code>powerjob-server</code>启动成功后，<code>powerjob-worker-samples</code>才会启动成功。这大概需要几分钟。</p>
+<p>运行成功后，浏览器访问 <a target="_blank" rel="noopener" href="http://127.0.0.1:7700/">http://127.0.0.1:7700/</a> </p>
+<p>应用名称：powerjob-worker-samples</p>
+<p>密码：powerjob123</p>
+<p>到这里是官方文档给出的步骤</p>
+<p>如果只需要单独启动一个powerjob-server服务，其他服务不用启动,那么则需要去修改docker-compose文件</p>
+<p>将其他服务注释掉，只保留powerjob-server服务</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用说明 V4.3.1</span></span><br><span class="line"><span class="comment"># 1. PowerJob 根目录执行：docker-compose up</span></span><br><span class="line"><span class="comment"># 2. 静静等待服务启动。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">version:</span> <span class="string">'3'</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line"><span class="comment">#   powerjob-mysql:</span></span><br><span class="line"><span class="comment">#     environment:</span></span><br><span class="line"><span class="comment">#       MYSQL_ROOT_HOST: "%"</span></span><br><span class="line"><span class="comment">#       MYSQL_ROOT_PASSWORD: 'OSUsol!LSMUswe#'</span></span><br><span class="line"><span class="comment">#     restart: always</span></span><br><span class="line"><span class="comment">#     container_name: powerjob-mysql</span></span><br><span class="line"><span class="comment">#     image: powerjob/powerjob-mysql:latest</span></span><br><span class="line"><span class="comment">#     ports:</span></span><br><span class="line"><span class="comment">#       - "3307:3306"</span></span><br><span class="line"><span class="comment">#     volumes:</span></span><br><span class="line"><span class="comment">#       - ./powerjob-data/powerjob-mysql:/var/lib/mysql</span></span><br><span class="line"><span class="comment">#     command: --lower_case_table_names=1</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">powerjob-server:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">powerjob-server</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">powerjob/powerjob-server:latest</span></span><br><span class="line">    <span class="attr">network_mode:</span> <span class="string">bridge</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="comment"># depends_on:</span></span><br><span class="line">    <span class="comment">#   - powerjob-mysql</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">JVMOPTIONS:</span> <span class="string">"-Xmx512m"</span></span><br><span class="line">      <span class="attr">PARAMS:</span> <span class="string">"--oms.mongodb.enable=false --spring.datasource.core.jdbc-url=jdbc:mysql://192.168.1.1:3306/powerjob-product?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=Asia/Shanghai --spring.datasource.core.username=root --spring.datasource.core.password=root"</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"7700:7700"</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"10086:10086"</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"10010:10010"</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./powerjob-data/powerjob-server:/root/powerjob/server/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#   powerjob-worker-samples:</span></span><br><span class="line"><span class="comment">#     container_name: powerjob-worker-samples</span></span><br><span class="line"><span class="comment">#     image: powerjob/powerjob-worker-samples:latest</span></span><br><span class="line"><span class="comment">#     restart: always</span></span><br><span class="line"><span class="comment">#     depends_on:</span></span><br><span class="line"><span class="comment">#       - powerjob-mysql</span></span><br><span class="line"><span class="comment">#       - powerjob-server</span></span><br><span class="line"><span class="comment"># #    environment:</span></span><br><span class="line"><span class="comment"># #      PARAMS: "--powerjob.worker.server-address=powerjob-server:7700"</span></span><br><span class="line"><span class="comment">#     ports:</span></span><br><span class="line"><span class="comment">#       - "8081:8081"</span></span><br><span class="line"><span class="comment">#       - "27777:27777"</span></span><br><span class="line"><span class="comment">#     volumes:</span></span><br><span class="line"><span class="comment">#       - ./powerjob-data/powerjob-worker-samples:/root/powerjob/worker</span></span><br><span class="line"><span class="comment">#       - ./others/script/wait-for-it.sh:/wait-for-it.sh</span></span><br><span class="line"><span class="comment">#     entrypoint:</span></span><br><span class="line"><span class="comment">#       - "sh"</span></span><br><span class="line"><span class="comment">#       - "-c"</span></span><br><span class="line"><span class="comment">#       - "chmod +x wait-for-it.sh &amp;&amp; ./wait-for-it.sh powerjob-server:7700 --strict -- java -Xmx512m -jar /powerjob-worker-samples.jar --powerjob.worker.server-address=powerjob-server:7700"</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<p>紧接着需要去修改powerjob-server中starter的配置文件，完整目录为PowerJob/powerjob-server/powerjob-server-starter/src/main/resources</p>
+<p><img src="/2023/05/13/Powerjob%E9%83%A8%E7%BD%B2/image-20230513143306144.png" alt="image-20230513143306144"></p>
+<p>从这张图可以看出当前使用的是application-daily的配置文件，所以去修改这个配置文件中与数据库相关的配置即可</p>
+<p>准备工作做完后使用docker-compose up启动(docker-compose up -d后台启动)</p>
+<p>这里已经成功部署起来了</p>
+<p><img src="/2023/05/13/Powerjob%E9%83%A8%E7%BD%B2/image-20230513143558233.png" alt="image-20230513143558233"></p>
+<p>浏览器7700端口也可以访问了</p>
+<p><img src="/2023/05/13/Powerjob%E9%83%A8%E7%BD%B2/../../Typora%E7%AC%94%E8%AE%B0/Powerjob%E9%83%A8%E7%BD%B2/image-20230513143630816.png"></p>
+<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>我自己其实在配置过程只用了很少时间，大部分问题主要是因为我部署后总是连接不到数据库，因为我的MySQL数据库也是采用docker容器来部署的，再排查过username和password后仍然不行，这时我想到会不会是因为不在同一个网段呢？</p>
+<p>于是我使用</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker network ls <span class="comment">//查看所有网络</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>发现除了bridge、host、null以外还有一个powerjob-default网络,这时我才意识到我连接不上的原因，在docker容器内，不同容器之间互相通信需要在同一个网段内，于是我在docker-compose配置文件中指定了加入到docker的默认bridge网络中</p>
+<p><img src="/2023/05/13/Powerjob%E9%83%A8%E7%BD%B2/image-20230513144158888.png" alt="image-20230513144158888"></p>
+<p>启动检查网络</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查看bridge下的所有容器</span></span><br><span class="line">docker network inspect bridge | grep <span class="string">"Name\|IPv4Address"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="/2023/05/13/Powerjob%E9%83%A8%E7%BD%B2/image-20230513144358481.png" alt="image-20230513144358481"></p>
+<p>这样powerjob-server和mysql在同一个网段下就可以进行通信了</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢老板打赏<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/AlipaySQ.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/WeChatSQ.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/08/21/hexo-yilia%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/" class="archive-article-date">
-  	<time datetime="2022-08-21T15:06:59.213Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/08/21/hexo-yilia%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/">hexo-yilia添加音乐播放器</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">个人博客</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">powerjob</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hexo-yilia</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">音乐播放器</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">docker-compose</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记//" class="article-tag-list-link color5">学习笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/05/13/Powerjob%E9%83%A8%E7%BD%B2/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/08/21/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2022-08-21T07:19:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-21</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2022/09/16/%E4%BD%BF%E7%94%A8APlayer%E5%92%8CMetingJS%E8%A7%A3%E5%86%B3%E5%8D%9A%E5%AE%A2%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC%E9%9F%B3%E4%B9%90%E6%9A%82%E5%81%9C%E7%9A%84%E9%97%AE%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用APlayer和MetingJS解决博客页面跳转音乐暂停的问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/08/21/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">搭建个人博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">个人博客</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记//" class="article-tag-list-link color5">学习笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Powerjob%E9%83%A8%E7%BD%B2"><span class="toc-number">1.</span> <span class="toc-text">Powerjob部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B%EF%BC%88docker-compose%E7%89%88%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">快速开始（docker-compose版）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E8%A6%81%E6%B1%82"><span class="toc-number">3.</span> <span class="toc-text">环境要求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%B8%8B%E8%BD%BD%E9%A1%B9%E7%9B%AE"><span class="toc-number">4.</span> <span class="toc-text">1. 下载项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E8%BF%90%E8%A1%8C"><span class="toc-number">5.</span> <span class="toc-text">2. 运行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">6.</span> <span class="toc-text">遇到的问题</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/08/19/SpringCloud%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2022-08-19T09:42:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/08/19/SpringCloud%E7%AC%94%E8%AE%B0/">SpringCloud笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">SpringCloud</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习笔记//" class="article-tag-list-link color5">学习笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
   
-    </div></section>
   
 
-    
+  
+  <div id="SOHUCS" sid="Powerjob部署" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cywevYAFU",
+        conf: "prod_4e0ef96b31f9369c7d16625621540cb0"
+    });
+</script>
+</script>
+  
+
+  
+
+  
 
 
           </div>
@@ -434,8 +511,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
