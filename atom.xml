@@ -3,11 +3,11 @@
   <title>Henry</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://henryxcy.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://henryxcy.github.io/"/>
   <updated>2023-05-13T07:44:47.839Z</updated>
-  <id>http://example.com/</id>
+  <id>https://henryxcy.github.io/</id>
   
   <author>
     <name>Henry</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Powerjob部署</title>
-    <link href="http://example.com/2023/05/13/Powerjob%E9%83%A8%E7%BD%B2/"/>
-    <id>http://example.com/2023/05/13/Powerjob%E9%83%A8%E7%BD%B2/</id>
+    <link href="https://henryxcy.github.io/2023/05/13/Powerjob%E9%83%A8%E7%BD%B2/"/>
+    <id>https://henryxcy.github.io/2023/05/13/Powerjob%E9%83%A8%E7%BD%B2/</id>
     <published>2023-05-13T07:16:16.000Z</published>
     <updated>2023-05-13T07:44:47.839Z</updated>
     
@@ -31,16 +31,16 @@
     
     
     
-    <category term="powerjob" scheme="http://example.com/tags/powerjob/"/>
+    <category term="powerjob" scheme="https://henryxcy.github.io/tags/powerjob/"/>
     
-    <category term="docker-compose" scheme="http://example.com/tags/docker-compose/"/>
+    <category term="docker-compose" scheme="https://henryxcy.github.io/tags/docker-compose/"/>
     
   </entry>
   
   <entry>
     <title>使用APlayer和MetingJS解决博客页面跳转音乐暂停的问题</title>
-    <link href="http://example.com/2022/09/16/%E4%BD%BF%E7%94%A8APlayer%E5%92%8CMetingJS%E8%A7%A3%E5%86%B3%E5%8D%9A%E5%AE%A2%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC%E9%9F%B3%E4%B9%90%E6%9A%82%E5%81%9C%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>http://example.com/2022/09/16/%E4%BD%BF%E7%94%A8APlayer%E5%92%8CMetingJS%E8%A7%A3%E5%86%B3%E5%8D%9A%E5%AE%A2%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC%E9%9F%B3%E4%B9%90%E6%9A%82%E5%81%9C%E7%9A%84%E9%97%AE%E9%A2%98/</id>
+    <link href="https://henryxcy.github.io/2022/09/16/%E4%BD%BF%E7%94%A8APlayer%E5%92%8CMetingJS%E8%A7%A3%E5%86%B3%E5%8D%9A%E5%AE%A2%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC%E9%9F%B3%E4%B9%90%E6%9A%82%E5%81%9C%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>https://henryxcy.github.io/2022/09/16/%E4%BD%BF%E7%94%A8APlayer%E5%92%8CMetingJS%E8%A7%A3%E5%86%B3%E5%8D%9A%E5%AE%A2%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC%E9%9F%B3%E4%B9%90%E6%9A%82%E5%81%9C%E7%9A%84%E9%97%AE%E9%A2%98/</id>
     <published>2022-09-15T16:25:39.000Z</published>
     <updated>2023-05-13T07:37:54.358Z</updated>
     
@@ -51,19 +51,19 @@
     
     
     
-    <category term="学习笔记" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://henryxcy.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="个人博客" scheme="http://example.com/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <category term="个人博客" scheme="https://henryxcy.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     
-    <category term="音乐播放器" scheme="http://example.com/tags/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/"/>
+    <category term="音乐播放器" scheme="https://henryxcy.github.io/tags/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/"/>
     
   </entry>
   
   <entry>
     <title>微服务-服务注册发现、配置、网关</title>
-    <link href="http://example.com/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/"/>
-    <id>http://example.com/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/</id>
+    <link href="https://henryxcy.github.io/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/"/>
+    <id>https://henryxcy.github.io/2022/09/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E7%BD%91%E5%85%B3/</id>
     <published>2022-09-15T14:30:25.000Z</published>
     <updated>2022-09-15T14:54:37.124Z</updated>
     
@@ -74,23 +74,23 @@
     
     
     
-    <category term="学习笔记" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://henryxcy.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="微服务" scheme="http://example.com/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+    <category term="微服务" scheme="https://henryxcy.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
     
-    <category term="Nacos服务注册" scheme="http://example.com/tags/Nacos%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C/"/>
+    <category term="Nacos服务注册" scheme="https://henryxcy.github.io/tags/Nacos%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C/"/>
     
-    <category term="Nacos配置管理" scheme="http://example.com/tags/Nacos%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/"/>
+    <category term="Nacos配置管理" scheme="https://henryxcy.github.io/tags/Nacos%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/"/>
     
-    <category term="Gateway网关" scheme="http://example.com/tags/Gateway%E7%BD%91%E5%85%B3/"/>
+    <category term="Gateway网关" scheme="https://henryxcy.github.io/tags/Gateway%E7%BD%91%E5%85%B3/"/>
     
   </entry>
   
   <entry>
     <title>博客部署到自己的云服务器</title>
-    <link href="http://example.com/2022/09/09/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    <id>http://example.com/2022/09/09/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</id>
+    <link href="https://henryxcy.github.io/2022/09/09/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <id>https://henryxcy.github.io/2022/09/09/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</id>
     <published>2022-09-09T12:24:00.000Z</published>
     <updated>2022-09-09T13:17:03.189Z</updated>
     
@@ -103,14 +103,14 @@
     
     
     
-    <category term="个人博客" scheme="http://example.com/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <category term="个人博客" scheme="https://henryxcy.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
   <entry>
     <title>hexo-yilia添加音乐播放器</title>
-    <link href="http://example.com/2022/08/21/hexo-yilia%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/"/>
-    <id>http://example.com/2022/08/21/hexo-yilia%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/</id>
+    <link href="https://henryxcy.github.io/2022/08/21/hexo-yilia%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/"/>
+    <id>https://henryxcy.github.io/2022/08/21/hexo-yilia%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/</id>
     <published>2022-08-21T15:06:59.213Z</published>
     <updated>2023-05-13T07:04:56.813Z</updated>
     
@@ -121,21 +121,21 @@
     
     
     
-    <category term="学习笔记" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://henryxcy.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="个人博客" scheme="http://example.com/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <category term="个人博客" scheme="https://henryxcy.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     
-    <category term="hexo-yilia" scheme="http://example.com/tags/hexo-yilia/"/>
+    <category term="hexo-yilia" scheme="https://henryxcy.github.io/tags/hexo-yilia/"/>
     
-    <category term="音乐播放器" scheme="http://example.com/tags/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/"/>
+    <category term="音乐播放器" scheme="https://henryxcy.github.io/tags/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/"/>
     
   </entry>
   
   <entry>
     <title>搭建个人博客</title>
-    <link href="http://example.com/2022/08/21/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://example.com/2022/08/21/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</id>
+    <link href="https://henryxcy.github.io/2022/08/21/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://henryxcy.github.io/2022/08/21/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</id>
     <published>2022-08-21T07:19:54.000Z</published>
     <updated>2022-08-22T08:51:37.465Z</updated>
     
@@ -146,17 +146,17 @@
     
     
     
-    <category term="学习笔记" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://henryxcy.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="个人博客" scheme="http://example.com/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <category term="个人博客" scheme="https://henryxcy.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
   <entry>
     <title>SpringCloud笔记</title>
-    <link href="http://example.com/2022/08/19/SpringCloud%E7%AC%94%E8%AE%B0/"/>
-    <id>http://example.com/2022/08/19/SpringCloud%E7%AC%94%E8%AE%B0/</id>
+    <link href="https://henryxcy.github.io/2022/08/19/SpringCloud%E7%AC%94%E8%AE%B0/"/>
+    <id>https://henryxcy.github.io/2022/08/19/SpringCloud%E7%AC%94%E8%AE%B0/</id>
     <published>2022-08-19T09:42:31.000Z</published>
     <updated>2022-08-22T08:51:44.958Z</updated>
     
@@ -167,12 +167,12 @@
     
     
     
-    <category term="学习笔记" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://henryxcy.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="Spring" scheme="http://example.com/tags/Spring/"/>
+    <category term="Spring" scheme="https://henryxcy.github.io/tags/Spring/"/>
     
-    <category term="SpringCloud" scheme="http://example.com/tags/SpringCloud/"/>
+    <category term="SpringCloud" scheme="https://henryxcy.github.io/tags/SpringCloud/"/>
     
   </entry>
   
